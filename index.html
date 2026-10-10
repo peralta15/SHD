@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f1e8">
+  <meta name="description" content="Un pequeño reto para hacer algo bueno por ti cada día.">
+  <title>RetoDiario</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="RetoDiario, inicio">
+      <span class="brand-icon" aria-hidden="true">✳</span>
+      <span><strong>RetoDiario</strong><small>Pequeños retos, grandes cambios.</small></span>
+    </a>
+    <span class="date-chip" id="todayLabel">Tu día, a tu ritmo</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="welcome">
+      <p class="eyebrow">UN MOMENTO PARA TI</p>
+      <h1>Hoy puedes empezar<br><span>con algo pequeño.</span></h1>
+      <p class="intro">No tienes que hacerlo todo. Solo elige un pequeño reto y hazlo a tu manera.</p>
+    </section>
+
+    <section class="challenge-card" aria-labelledby="challengeTitle">
+      <div class="card-topline">
+        <span class="tag"><span class="tag-dot"></span> RETO DE HOY</span>
+        <span class="day-number" id="dayNumber">RETO 01</span>
+      </div>
+      <div class="challenge-symbol" aria-hidden="true" id="challengeSymbol">☀</div>
+      <p class="category" id="challengeCategory">BIENESTAR</p>
+      <h2 id="challengeTitle">Dedica 10 minutos a aprender algo nuevo.</h2>
+      <p class="challenge-description" id="challengeDescription">Puede ser una palabra, una habilidad o un tema que siempre te haya dado curiosidad.</p>
+      
+      <div class="card-bottom">
+        <span class="time-estimate"><span aria-hidden="true">◷</span> <span id="challengeTime">10 minutos</span></span>
+        <button class="primary-button" id="completeButton" type="button">Marcar como completado <span aria-hidden="true">✓</span></button>
+      </div>
+      <p class="completion-note" id="completionNote" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="lower-grid">
+      <article class="progress-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">VAS A TU RITMO</p><h2>Tu progreso</h2></div>
+          <span class="progress-icon" aria-hidden="true">↗</span>
+        </div>
+        <div class="progress-numbers">
+          <strong id="completedCount">0</strong><span>retos completados</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Progreso del reto de hoy" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" id="progressTrack">
+          <span id="progressFill"></span>
+        </div>
+        <p class="small-copy" id="progressCopy">Cada pequeño paso cuenta.</p>
+      </article>
+
+      <article class="reminder-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">UN PEQUEÑO AVISO</p><h2>Recordatorios</h2></div>
+          <span class="bell-icon" id="notificationIcon" role="button" tabindex="0" title="Activar notificaciones" aria-label="Activar notificaciones">♧</span>
+        </div>
+        
+        <p class="reminder-copy">Activa las notificaciones para recibir un aviso y volver a tu reto diario.</p>
+        <button class="secondary-button" id="notificationButton" type="button">Activar notificaciones</button>
+        <p class="small-copy" id="notificationStatus" role="status" aria-live="polite">Las notificaciones están desactivadas.</p>
+        
+        <div class="message-sender">
+          <label for="messageTitle">Título del mensaje</label>
+          <input id="messageTitle" type="text" maxlength="80" value="RetoDiario" placeholder="Título de la notificación">
+          
+          <label for="messageBody">Mensaje del reto</label>
+          <textarea id="messageBody" rows="3" maxlength="200" placeholder="Escribe el mensaje que recibirán los dispositivos suscritos"></textarea>
+          
+          <button class="primary-button" id="sendMessageButton" type="button">Enviar mensaje y notificar <span>↗</span></button>
+          <p class="small-copy" id="messageStatus" role="status" aria-live="polite"></p>
+        </div>
+      </article>
+    </section>
+
+    <aside class="gentle-note">
+      <span aria-hidden="true">✦</span>
+      <p><strong>Recuerda:</strong> no se trata de hacerlo perfecto, sino de dedicarte un momento.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <span>RetoDiario</span>
+    <span>Un paso a la vez.</span>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

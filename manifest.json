@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "RetoDiario",
+  "short_name": "RetoDiario",
+  "description": "Un pequeño reto para hacer algo bueno por ti cada día.",
+  "lang": "es-MX",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f1e8",
+  "theme_color": "#f8f1e8",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
