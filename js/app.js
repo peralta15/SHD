@@ -1,4 +1,4 @@
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL = 'https://peralta15-reto-diario-servidor.onrender.com';
 // Pega aquí la misma clave pública VAPID que guardaste en server/.env como VAPID_PUBLIC.
 const VAPID_PUBLIC_KEY = 'BD9daQWhxTQj0OuW1JP5UjFWDi6ZzgvF71nnk-eLrROl9dAXqY_xITqbl2kd3DIFepyw-ytOTSUCpqaSLGqgZIs';
 
